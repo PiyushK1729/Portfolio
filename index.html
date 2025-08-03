@@ -17,7 +17,8 @@
         }
 
         body {
-            background-color: rgb(13, 8, 80);
+            background-color: rgb(26 82 143);
+            ;
             color: rgb(255, 255, 255);
             font-family: 'popins', sans-serif;
         }
@@ -26,8 +27,8 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 80px;
-            background-color: rgb(26, 12, 130);
+            height: 100px;
+            background-color: rgb(42 114 204);
 
         }
 
@@ -47,22 +48,56 @@
         nav ul li a {
             text-decoration: none;
             color: rgb(255, 255, 255);
+            font-size: 23px;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: rgb(182, 182, 247);
-            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            font-size: 1.3rem;
+            
         }
+
+        .underline {
+            display: inline-block;
+            position: relative;
+            
+            text-decoration: none;
+        }
+
+        .underline::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+
+            height: 3.5px;
+
+            bottom: -3px;
+            left: 0;
+            background-color: rgb(26 82 143);
+
+            transform-origin: bottom right;
+
+            transition: transform 0.3s ease-out;
+        }
+
+        .underline:hover::after {
+            transform: scaleX(1.1);
+            transform-origin: bottom left;
+        }
+
 
         main hr {
             border: 0;
-            background-color: rgb(121, 121, 206);
+            background-color: rgb(255, 255, 255);
             margin: 40px 40px;
             height: 1.5px;
         }
 
         .left {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            color: white;
         }
 
         .firstsection {
@@ -82,7 +117,7 @@
             font-size: 2.6rem;
         }
 
-        .leftsection .buttons{
+        .leftsection .buttons {
             padding: 23px 0;
         }
 
@@ -90,7 +125,7 @@
             padding: 10px;
             font-size: medium;
             margin-top: 25px;
-            background-color: #1d1d9a;
+            background-color: rgb(42 114 204);
             border: 3px solid white;
             border-radius: 7px;
             font-size: 18px;
@@ -98,28 +133,36 @@
             cursor: pointer;
         }
 
+        .btns {
+            font-family: 'popins', sans-serif;
+            color: white;
+            display: flex;
+            text-decoration: solid;
+            font-style: normal;
+        }
+
         .rightsection img {
             width: 100%;
-            margin: ;
+            
 
         }
 
         .purple {
-            color: rgb(162, 97, 223);
+            color: rgb(111 233 193);
         }
 
         .text-gray {
-            color: gray;
+            color: rgb(255, 255, 255);
         }
 
         #element {
-            color: rgb(162, 97, 223);
+            color: rgb(111 233 193);
         }
 
         .secondsection {
             margin: auto;
-            max-width: 72vw;
-            height: 80vh;
+            max-width: 85vw;
+            height: 70vh;
 
         }
 
@@ -144,34 +187,36 @@
         }
 
         .image-top {
-            width: 23px;
+            width: 80px;
             position: relative;
-            top: -31px;
+            top: -37px;
             left: -10px;
         }
 
         .vertical-title {
             position: relative;
-            top: 69px;
+            top: 57px;
             width: 150px;
+            font-size: large;
+            font-weight: bold;
         }
 
         .vertical-desc {
             display: flex;
             position: relative;
-            top: 87px;
-            color: gray;
+            top: 70px;
+            color: rgb(255, 255, 255);
             width: 162px;
             font-size: 13px;
         }
 
         footer {
-            background-color: #0d1875;
+            background-color: rgb(42 114 204);
         }
 
         .footer {
             display: flex;
-            padding: 23px 190px;
+            padding: 43px 190px;
             justify-content: space-evenly;
         }
 
@@ -186,10 +231,61 @@
         footer .footer-rights {
             text-align: center;
             padding: 12px 0;
-            color: gray;
+            color: rgb(255, 255, 255);
 
 
         }
+
+        .github {
+            width: 30px;
+            position: relative;
+            top: 35px;
+            left: -250px;
+        }
+
+        .linkedin {
+            width: 45px;
+            position: relative;
+            top: 35px;
+            left: -250px;
+        }
+
+        .insta {
+            width: 30px;
+            position: relative;
+            top: 35px;
+            left: -250px;
+        }
+
+        .mail {
+            width: 30px;
+            position: relative;
+            top: 35px;
+            left: -250px;
+        }
+
+        .image-lower {
+            list-style-type: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .foot-text {
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-weight: bold;
+            margin-top: -15px;
+            margin-left: 15.7rem;
+            margin-bottom: 1rem;
+
+        }
+
+
     </style>
 </head>
 
@@ -199,11 +295,10 @@
             <div class="left">Piyush's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+                    <li class="list"><a href="about.html" class="underline">About</a></li>
+                    <li><a href="skills.html" class="underline">Skills</a></li>
+                    <li><a href="pro.html" class="underline">Projects</a></li>
+                    <li><a href="contacts.html" class="underline">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -218,11 +313,11 @@
                 <span id="element"></span>
                 <div class="buttons">
                     <button class="btn">Download Resume</button>
-                    <button class="btn">Visit Github</button>
+                    <button class="btn"><a class="btns" href="https://github.com/PiyushK1729">Github</a></button>
                 </div>
             </div>
             <div class="rightsection">
-                <img src="bg.png.png" alt="">
+                <img src="backg.png" alt="">
             </div>
 
         </section>
@@ -233,9 +328,9 @@
 
             <div class="box">
                 <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
+                    <img class="image-top" src="soon.png" alt="">
                     <div class="vertical-title">
-                        HTML Developer (2020-2024)
+                        To be Added Soon
                     </div>
                     <dev class="vertical-desc">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ad possimus minus reprehenderit
@@ -244,9 +339,9 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
+                    <img class="image-top" src="soon.png" alt="">
                     <div class="vertical-title">
-                        HTML Developer (2020-2024)
+                        To be Added Soon
                     </div>
                     <dev class="vertical-desc">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ad possimus minus reprehenderit
@@ -255,9 +350,9 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
+                    <img class="image-top" src="soon.png" alt="">
                     <div class="vertical-title">
-                        HTML Developer (2020-2024)
+                        To be Added Soon
                     </div>
                     <dev class="vertical-desc">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ad possimus minus reprehenderit
@@ -266,9 +361,9 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
+                    <img class="image-top" src="soon.png" alt="">
                     <div class="vertical-title">
-                        HTML Developer (2020-2024)
+                        To be Added Soon
                     </div>
                     <dev class="vertical-desc">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ad possimus minus reprehenderit
@@ -277,9 +372,9 @@
                 </div>
 
                 <div class="vertical">
-                    <img class="image-top" src="html.png" alt="">
+                    <img class="image-top" src="soon.png" alt="">
                     <div class="vertical-title">
-                        HTML Developer (2020-2024)
+                        To be Added Soon
                     </div>
                     <dev class="vertical-desc">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ad possimus minus reprehenderit
@@ -294,37 +389,25 @@
     <footer>
         <div class="footer">
             <div class="footer-first">
-                <h3>Piyush's Developer Portfolio</h3>
+                <h3 class="foot-text">Contact Me</h3>
             </div>
             <div class="footer-second">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact Me</li>
-                    <li>Services</li>
-                </ul>
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact Me</li>
-                    <li>Services</li>
+                <ul class="image-lower">
+                    <li><a href="https://github.com/PiyushK1729"><img class="github" src="github-logo.png" alt=""></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/piyush-kumar-337b2a22a/"><img class="linkedin"
+                                src="linkedin.png" alt=""></a></li>
+                    <li><a href="https://www.instagram.com/piyush._.1729/"><img class="insta" src="insta.png"
+                                alt=""></a></li>
+                    <li><a href="https://mail.google.com/mail/u/0/#inbox"><img class="mail" src="mail.png" alt=""></a>
+                    </li>
                 </ul>
 
-            </div>
-            <div class="footer-fourth">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact Me</li>
-                    <li>Services</li>
-                </ul>
 
             </div>
         </div>
         <div class="footer-rights">
-            Copyright &#169; piyushsportfolio.com | All Rights Reserved
+            Copyright &#169; piyush'sportfolio.com | All Rights Reserved
         </div>
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
