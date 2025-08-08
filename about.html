@@ -17,17 +17,76 @@
             padding: 0;
         }
 
-        .left {
-            font-size: 2.5rem;
-            color: white;
+        body {
+            background-color: rgb(26 82 143);
+            font-family: 'popins', sans-serif;
         }
 
         nav {
-            background-color: rgb(35, 75, 252);
+            background-color: rgb(42 114 204);
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 100px;
+            height: 130px;
+        }
+
+        .left {
+            font-size: 3.2rem;
+            color: white;
+        }
+
+        .para2 {
+            margin-top: 23px;
+        }
+
+        .para3 {
+            margin-top: 23px;
+        }
+
+        .image {
+            list-style-type: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .img {
+            width: 35rem;
+            position: absolute;
+            top: -33rem;
+            left: 5rem;
+        }
+
+        .right {
+            border: 3px solid #ccc;
+            border-radius: 8px;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: justify;
+            hyphens: auto;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+            width: 28vw;
+            margin-top: 5rem;
+            background-color: rgb(42 114 204);
+            margin-left: 11rem;
+            font-size: 20px;
+            color: white;
+            font-family: 'popins', sans-serif;
+            height: 25rem;
+
+        }
+
+        .left {
+            display: flex;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -42,6 +101,30 @@
     </header>
 
     <main>
+        <div class="content">
+            <div class="right">
+                <p>
+                    Hello! My name is Piyush Kumar, and I am from the city of Lucknow.Aspiring Software Developer and a
+                    current B.Tech Computer Science student at Roorkee Institute of Technology. I possess a strong
+                    command of foundational web technologies, including HTML, CSS, and JavaScript, complemented by a
+                    deep understanding of core programming principles from my coursework in C.
+                </p>
+                <p class="para2">
+                    Besides this i also have hobbies like watching movies and tv shows.This helps in keeping my work and
+                    personal life balanced.
+                </p>
+                <p class="para3">
+                    I am actively seeking entry-level or internship opportunities where I can leverage my skills to
+                    build intuitive and user-friendly web applications.
+                </p>
+            </div>
+
+            <div class="left">
+                <ul class="image">
+                    <li><a><img class="img" src="image.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
 
     </main>
 
